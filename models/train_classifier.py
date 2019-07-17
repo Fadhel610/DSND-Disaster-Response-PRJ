@@ -135,7 +135,6 @@ def evaluate_model(model, X_test, Y_test, category_names):
     file.write(str((Y_pred == Y_test).mean()*100))
     file.write('\n\n ---- The Detailed Reprot ---')
     y_pred_df = pd.DataFrame(y_pred, columns = y_test.columns)
-   # file = open('Results_Report', 'w+')
     for col in Y_test.columns:
         file.write('\n -> Category: {}'.format(col.upper()))
         file.write(classification_report(Y_test[col], Y_pred_df[col]))
