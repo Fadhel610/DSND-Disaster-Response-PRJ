@@ -30,4 +30,4 @@ This project is to apply the pipeline concept in processing messages and classif
 First you need to run `process_data.py`, then `train_classifer.py` and finally `run.py`.
 After that, go to http://0.0.0.0:3001 to interact with the web app.
 You will see two visuals related to the used data and you will be able to type a message and then see how the model classification 
-(There is a version with grid search that takes a very long time to finish, see it in the proposed changes.)
+(There is a version with grid search that takes a very long time to finish, see it in pull requests.)
