@@ -1,5 +1,16 @@
 # DSND-Disaster-Response-PRJ
-A project from Udacity's DSND aims at creating pipeline that processes messages from a web app
+A project from Udacity's DSND aims at creating pipeline that processes messages from a web app.
+
+
+We want a solution to process messages and classify them to send them to the appropriate disaster relief agency.
+The first part of the solution is done by collecting historical data that were labeled with 36 categories, and train a machine learning model to classify them.
+The second part is to create a machine learning pipeline that would take a raw message from a web app and process the text message, input it to the model and then classify it. 
+
+This is supported by some visuals as well. The workflow looks like this:
+
+Input message > Processing > ML model > Classification/Prediction  > Highlighting the predicted categories in the app
+
+
 # Installation
 It is required to have
 * Python 3
