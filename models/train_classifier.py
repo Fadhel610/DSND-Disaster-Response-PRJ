@@ -92,7 +92,7 @@ def build_model():
 
     A function that builds the model through pipeline
     Return:
-        model: a model that that processes text messages and classifies them
+        model: a model that that processes text messages and classifies them, grid search takes a long time to finish.
 
     '''
     model = Pipeline([
@@ -108,8 +108,13 @@ def build_model():
 
         ('clf', MultiOutputClassifier(RandomForestClassifier()))
     ])
-
-    return model
+    parameters = {'clf__estimator__n_estimators': [50, 75],
+                  'clf__estimator__min_samples_split': [2, 4],
+                  'clf__estimator__criterion': ['entropy', 'gini']
+                 }
+    cv = GridSearchCV(model, param_grid=parameters)
+    
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
